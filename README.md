@@ -21,16 +21,18 @@ Before running the playbook, ensure that the following prerequisites are met:
 
 ## Usage
 Create EC2 instance and S3 bucket
-1. Run the playbook to create the EC2 instance and S3 bucket:
+Run the playbook to create the EC2 instance and S3 bucket:
     ansible-playbook create_ec2_s3.yml
-2. The playbook will provision an EC2 instance and create an S3 bucket in the specified AWS region.
+2The playbook will provision an EC2 instance and create an S3 bucket in the specified AWS region.
 
 After the playbook execution, the EC2 instance's public IP will be displayed.
 
 Delete EC2 instance and S3 bucket
-1. Create Delete_ec2_s3.yml
-2. after making changes in instance id and selecting the name of the bucket
-3. run the command : ansible-playbook Delete_ec2_s3.yml
+1. Create
+   vim Delete_ec2_s3.yml
+3. after making changes in instance id and selecting the name of the bucket
+4. run the command :
+   ansible-playbook Delete_ec2_s3.yml
 
 Notes:
 Exercise caution when creating or deleting resources. Ensure that you have the necessary permissions and that you understand the implications of these actions.
