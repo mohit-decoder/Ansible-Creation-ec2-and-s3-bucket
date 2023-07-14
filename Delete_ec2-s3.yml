@@ -1,0 +1,21 @@
+---
+- name: Delete EC2 instance and S3 bucket
+  hosts: localhost
+  gather_facts: yes
+  vars:
+    region: us-west-1
+    instance_id: i-0dbbe740e93e0ced1
+    s3_bucket_name: my-bucket-builder003
+
+  tasks:
+    - name: Terminate EC2 instance
+      ec2_instance:
+        region: "{{ region }}"
+        instance_ids: ["{{ instance_id }}"]
+        state: absent
+
+    - name: Delete S3 bucket
+      s3_bucket:
+        name: "{{ s3_bucket_name }}"
+        region: "{{ region }}"
+        state: absent
