@@ -14,15 +14,15 @@ Before running the playbook, ensure that the following prerequisites are met:
 ## Installation
 
 1. Install Ansible on your system:
-   sudo apt update
-   sudo apt install ansible
+       sudo apt update
+       sudo apt install ansible
 2. Install required Python libraries:
-   sudo apt install python3-pip
-   pip3 install boto boto3 botocore
+       sudo apt install python3-pip
+       pip3 install boto boto3 botocore
 3. Install the AWS CLI:
-   sudo apt install awscli
+       sudo apt install awscli
 4. Configure AWS credentials by running:
-   aws configure
+       aws configure
 
 ## Usage
 Create EC2 instance and S3 bucket
@@ -37,7 +37,7 @@ Delete EC2 instance and S3 bucket
 2. after making changes in instance id and selecting the name of the bucket
 3. run the command : ansible-playbook Delete_ec2_s3.yml
 
-Notes
+Notes:
 Exercise caution when creating or deleting resources. Ensure that you have the necessary permissions and that you understand the implications of these actions.
 Make sure to configure your AWS credentials properly, either by setting environment variables or using AWS CLI configuration.
 Review and update the playbook variables as per your specific requirements before running the playbook.
