@@ -12,16 +12,11 @@ Before running the playbook, ensure that the following prerequisites are met:
 - You have the necessary permissions in AWS to create and delete EC2 instances and S3 buckets.
 
 ## Installation
-
-1. Install Ansible on your system:
        sudo apt update
        sudo apt install ansible
-2. Install required Python libraries:
        sudo apt install python3-pip
        pip3 install boto boto3 botocore
-3. Install the AWS CLI:
        sudo apt install awscli
-4. Configure AWS credentials by running:
        aws configure
 
 ## Usage
