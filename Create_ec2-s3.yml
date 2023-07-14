@@ -1,0 +1,17 @@
+---
+- name: Create EC2 instance
+  hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: Create EC2 instance
+      community.aws.ec2_instance:
+        name: my-instance
+        instance_type: t2.micro
+        image_id: ami-0f8e81a3da6e2510a
+        key_name: id_rsa
+        security_groups: default
+
+    - name: Create S3 bucket
+      amazon.aws.s3_bucket:
+        name: my-bucket-builder003
+        state: present
