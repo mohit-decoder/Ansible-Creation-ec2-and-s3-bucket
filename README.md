@@ -28,13 +28,12 @@ Run the playbook to create the EC2 instance and S3 bucket:
 After the playbook execution, the EC2 instance's public IP will be displayed.
 
 Delete EC2 instance and S3 bucket
-1. Create
-   vim Delete_ec2_s3.yml
+1. Create Delete_ec2_s3.yml
 3. after making changes in instance id and selecting the name of the bucket
-4. run the command :
+4. run the command 
    ansible-playbook Delete_ec2_s3.yml
 
-Notes:
+## Notes:
 Exercise caution when creating or deleting resources. Ensure that you have the necessary permissions and that you understand the implications of these actions.
 Make sure to configure your AWS credentials properly, either by setting environment variables or using AWS CLI configuration.
 Review and update the playbook variables as per your specific requirements before running the playbook.
